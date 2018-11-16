@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9dd6ca6-ac4b-43bf-938b-78a2405e90df" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2026686434">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="10" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="11" />
+          <entry key="txt" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="11" />
+          <entry key="PLAIN_TEXT" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="13541" />
+          <entry key="txt" value="818" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="13541" />
+          <entry key="PLAIN_TEXT" value="818" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+    </session>
+    <session id="-253926868">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="4295" />
+          <entry key="txt" value="201" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4295" />
+          <entry key="PLAIN_TEXT" value="201" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="txt" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.6029526">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Token.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="146">
+                  <caret line="32" column="78" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="78" />
+                  <folding>
+                    <element signature="docComment;class#Type#0;class#Token#0" />
+                    <element signature="class#Type#0;class#Token#0" />
+                    <element signature="docComment;method#Token#0;class#Token#0" />
+                    <element signature="method#Token#0;class#Token#0" />
+                    <element signature="docComment;method#toString#0;class#Token#0" />
+                    <element signature="e#942#943#0" expanded="true" />
+                    <element signature="e#968#969#0" expanded="true" />
+                    <element signature="e#1000#1001#0" expanded="true" />
+                    <element signature="e#1028#1029#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="17" selection-start-column="17" selection-end-column="17" />
+                  <folding>
+                    <element signature="docComment;method#getInputText#0;class#LexicalAnalyzer#0" />
+                    <element signature="method#getInputText#0;class#LexicalAnalyzer#0" />
+                    <element signature="docComment;method#getKeyWords#0;class#LexicalAnalyzer#0" />
+                    <element signature="method#getKeyWords#0;class#LexicalAnalyzer#0" />
+                    <element signature="docComment;method#sortToken#0;class#LexicalAnalyzer#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/SyntacticAnalyzer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="99">
+                  <caret line="190" column="75" lean-forward="true" selection-end-line="291" />
+                  <folding>
+                    <element signature="docComment;class#Exception#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#SyntacticAnalyzer#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#SyntacticAnalyzer#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#oneLexemRequire#0;class#SyntacticAnalyzer#0" />
+                    <element signature="e#707#708#0" expanded="true" />
+                    <element signature="e#761#762#0" expanded="true" />
+                    <element signature="docComment;method#twoLexemRequire#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#twoLexemRequire#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#threeLexemRequire#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#threeLexemRequire#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#getNextLexem#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#isFOR#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#isTO#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#isDO#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#isEnd#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#assignment#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#code#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#statement#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#statement#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#firstRule#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#firstRule#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#secondRule#0;class#SyntacticAnalyzer#0" />
+                    <element signature="method#secondRule#0;class#SyntacticAnalyzer#0" />
+                    <element signature="docComment;method#getMessage#0;class#SyntacticAnalyzer#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="181">
+                  <caret line="132" selection-start-line="132" selection-end-line="132" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/text.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="35" lean-forward="true" selection-start-column="33" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reader</find>
+      <find>allLexemsMap</find>
+      <find>sta</find>
+      <find>sort</find>
+      <find>dict</find>
+      <find>toStri</find>
+      <find>checkNextConstruction</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>textReader</replace>
+      <replace>lexemsDictionary</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test.txt" />
+        <option value="$PROJECT_DIR$/src/lexem.txt" />
+        <option value="$USER_HOME$/Downloads/Telegram Desktop/Vector.java" />
+        <option value="$USER_HOME$/Downloads/Telegram Desktop/Data.java" />
+        <option value="$PROJECT_DIR$/src/Token.java" />
+        <option value="$PROJECT_DIR$/src/SystAnalizer.java" />
+        <option value="$PROJECT_DIR$/src/Lexer.java" />
+        <option value="$PROJECT_DIR$/src/Lexical.java" />
+        <option value="$PROJECT_DIR$/src/LexicalAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/key words.txt" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/text.txt" />
+        <option value="$PROJECT_DIR$/src/SyntacticAnalyzer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SP_lab3_Osievskaya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SP_lab3_Osievskaya" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SP_lab3_Osievskaya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SP_lab3_Osievskaya" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542385780493" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="LexicalAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LexicalAnalyzer" />
+      <module name="SP_lab3_Osievskaya" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SP_lab3_Osievskaya" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LexicalAnalyzer" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LexicalAnalyzer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9dd6ca6-ac4b-43bf-938b-78a2405e90df" name="Default Changelist" comment="" />
+      <created>1538405571687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538405571687</updated>
+      <workItem from="1538405581478" duration="3890000" />
+      <workItem from="1538461341345" duration="37323000" />
+      <workItem from="1538552074623" duration="6824000" />
+      <workItem from="1538598583436" duration="3271000" />
+      <workItem from="1539011220266" duration="355000" />
+      <workItem from="1539088669828" duration="353000" />
+      <workItem from="1540756259439" duration="1735000" />
+      <workItem from="1540758444236" duration="1909000" />
+      <workItem from="1540760637869" duration="1414000" />
+      <workItem from="1540765844383" duration="1786000" />
+      <workItem from="1540767654338" duration="1786000" />
+      <workItem from="1540769462698" duration="1788000" />
+      <workItem from="1540771271764" duration="1788000" />
+      <workItem from="1540773082359" duration="1786000" />
+      <workItem from="1540774890869" duration="1790000" />
+      <workItem from="1540776740310" duration="1139000" />
+      <workItem from="1540914710775" duration="1780000" />
+      <workItem from="1540916723035" duration="1775000" />
+      <workItem from="1540918525477" duration="924000" />
+      <workItem from="1540970409216" duration="341000" />
+      <workItem from="1540973117816" duration="1458000" />
+      <workItem from="1540974928514" duration="1023000" />
+      <workItem from="1541416325641" duration="33000" />
+      <workItem from="1542049488578" duration="6327000" />
+      <workItem from="1542057884435" duration="34821000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="117419000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2815534" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5779037" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.30638298" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" weight="0.39885223" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32998565" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013423" side_tool="true" weight="0.39432624" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3248227" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>148</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>157</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SyntacticAnalyzer.java</url>
+          <line>165</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/regex/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="450" selection-start-line="450" selection-end-line="450" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/Data.java" />
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/Vector.java" />
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/Matrix.java" />
+    <entry file="file://$PROJECT_DIR$/src/lexem.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/key words.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="28" selection-start-column="3" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;method#getInputText#0;class#LexicalAnalyzer#0" />
+            <element signature="method#getInputText#0;class#LexicalAnalyzer#0" />
+            <element signature="docComment;method#getKeyWords#0;class#LexicalAnalyzer#0" />
+            <element signature="method#getKeyWords#0;class#LexicalAnalyzer#0" />
+            <element signature="docComment;method#sortToken#0;class#LexicalAnalyzer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="78" />
+          <folding>
+            <element signature="docComment;class#Type#0;class#Token#0" />
+            <element signature="class#Type#0;class#Token#0" />
+            <element signature="docComment;method#Token#0;class#Token#0" />
+            <element signature="method#Token#0;class#Token#0" />
+            <element signature="docComment;method#toString#0;class#Token#0" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" lean-forward="true" selection-start-column="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SyntacticAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="190" column="75" lean-forward="true" selection-end-line="291" />
+          <folding>
+            <element signature="docComment;class#Exception#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#SyntacticAnalyzer#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#SyntacticAnalyzer#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#oneLexemRequire#0;class#SyntacticAnalyzer#0" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="docComment;method#twoLexemRequire#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#twoLexemRequire#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#threeLexemRequire#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#threeLexemRequire#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#getNextLexem#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#isFOR#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#isTO#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#isDO#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#isEnd#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#assignment#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#code#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#statement#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#statement#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#firstRule#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#firstRule#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#secondRule#0;class#SyntacticAnalyzer#0" />
+            <element signature="method#secondRule#0;class#SyntacticAnalyzer#0" />
+            <element signature="docComment;method#getMessage#0;class#SyntacticAnalyzer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SP_lab3_Osievskaya</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

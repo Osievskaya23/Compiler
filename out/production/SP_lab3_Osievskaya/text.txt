@@ -1,0 +1,1 @@
+for a:= 4 to y do for a:=t to 5 do g:=1;  end; end; end;
