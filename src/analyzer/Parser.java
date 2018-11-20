@@ -1,4 +1,7 @@
+import javafx.scene.chart.ValueAxis;
+
 import java.util.ArrayList;
+import java.util.SplittableRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,8 +21,8 @@ public class Parser {
     /** Creating the list with key words */
     private ArrayList<String> keyWords = lexer.getKeyWords();
 
-    /** Variable list */
-    private ArrayList<Variable> variableList;
+    /** Creating the list with variable types */
+    private ArrayList<String> variableTypes = lexer.getVariableTypes();
 
     /** Looking for lexemas from the text */
     public ArrayList<Token> parser(){
@@ -141,4 +144,38 @@ public class Parser {
         }
         System.out.println("-----------------------------------------");
     }
+
+    /** Create variables list *//*
+    public ArrayList<Variable> createVariableList(){
+        ArrayList<Variable> variables = new ArrayList<>();
+        try {
+            for (int i = 0; i < tokens.size(); i++) {
+                if (tokens.get(i).getTyp() == Token.Type.VARIABLE){
+                    variables.add(getVariable(tokens.get(i), tokens.get(i-1).getValue()));
+                }
+            }
+        } catch (IndexOutOfBoundsException e){
+        }
+        return variables;
+    }
+
+    private Variable getVariable(Token token, String type) {
+        Variable variable = null;
+        if (token.getTyp() == Token.Type.VARIABLE && variableTypes.contains(type)){
+            variable = new Variable(token,type);
+        } else if (token.getTyp() == Token.Type.VARIABLE) {
+            variable = new Variable(token);
+        }
+        return variable;
+    }
+
+    *//** Set variables type *//*
+    private ArrayList<Variable> setVariableType(ArrayList<Variable> variables, Token token, String type) {
+        if (token.getTyp() == Token.Type.VARIABLE && variableTypes.contains(type)){
+            variables.add(new Variable(token, type));
+        } else if (token.getTyp() == Token.Type.VARIABLE) {
+            variables.add(new Variable(token));
+        }
+        return variables;
+    }*/
 }

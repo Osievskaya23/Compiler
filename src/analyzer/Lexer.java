@@ -68,7 +68,7 @@ public class Lexer extends Main{
      * Read types of variables and write them down into the variableTypes list
      * @return list of key words
      */
-    ArrayList<String> getKeyWordsType(){
+    ArrayList<String> getVariableTypes(){
         try{
             FileInputStream fstream = new FileInputStream("C:\\Users\\38066\\IdeaProjects\\" +
                     "SP_lab3_Osievskaya\\src\\variable type.txt");
