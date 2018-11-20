@@ -1,4 +1,4 @@
-public class Token extends LexicalAnalyzer {
+public class Token extends Lexer {
 
     /**
      * Types for this lexical analyzer to analyze
@@ -9,9 +9,9 @@ public class Token extends LexicalAnalyzer {
         NUMBER, VARIABLE, CARET
     }
 
-    public Type typ;
-    public String value;
-    public int position;
+    private Type typ;
+    private String value;
+    private int position;
 
     /**
      * Token constructor
@@ -33,15 +33,15 @@ public class Token extends LexicalAnalyzer {
         return String.format("| %-10s%-7s%-20s |", this.value, "|", this.typ);
     }
 
-    public Type getTyp() {
+    Type getTyp() {
         return typ;
     }
 
-    public String getValue() {
+    String getValue() {
         return value;
     }
 
-    public int getPosition() {
+    int getPosition() {
         return position;
     }
 

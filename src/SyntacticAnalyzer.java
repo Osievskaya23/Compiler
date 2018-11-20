@@ -4,23 +4,18 @@ public class SyntacticAnalyzer {
 
     private ArrayList<Token> lexemList;
     private Token currentToken;
-    private SynError currentError;
+    private SynError currentError = SynError.OK;
     private int position;
 
-    /**
-     * Kinds of exceptions
-     */
+    /** Kinds of exceptions */
     public enum SynError {
         KEY_WORD, OK, EXPECTED_OPERATOR, EXPECTED_SEMICOLON, EXPECTED_VARIABLE,
         EXPECTED_LEFT_PAREN, EXPECTED_RIGHT_PAREN
     }
 
-    /**
-     * Standart constructor
-     */
+    /** Standart constructor */
     SyntacticAnalyzer(){
     }
-
 
     /**
      * Check the lexema's type
@@ -57,13 +52,14 @@ public class SyntacticAnalyzer {
                 lexema.getTyp() == thirdExpectedType;
     }
 
-    // install current token and position in the text
+    /** Install current token and current position of the text */
     private Token getNextLexem(){
         currentToken = lexemList.remove(0);
         position = currentToken.getPosition();
         return currentToken;
     }
 
+    /** Check is it "for" token name */
     private boolean isFOR(Token token){
         if(!token.getValue().equals("for") ) {
             System.out.println("'for' is expected!");
@@ -72,6 +68,7 @@ public class SyntacticAnalyzer {
         else return true;
     }
 
+    /** Check is it "to" token name */
     private boolean isTO(Token token) {
         if(!token.getValue().equals("to") ) {
             System.out.println("'to' is expected!");
@@ -80,6 +77,7 @@ public class SyntacticAnalyzer {
         else return true;
     }
 
+    /** Check is it "do" token name */
     private boolean isDO(Token token) {
         if(!token.getValue().equals("do") ) {
             System.out.println("'do' is expected!");
@@ -88,11 +86,12 @@ public class SyntacticAnalyzer {
         else return true;
     }
 
+    /** Check is it "begin" token name */
     private boolean isBegin(Token token) {
-        if(!token.getValue().equals("begin") ) return false;
-        else return true;
+        return token.getValue().equals("begin");
     }
 
+    /** Check is it "end" token name */
     private boolean isEnd(Token token) {
         if(!token.getValue().equals("end") ) {
             System.out.println("'end is expected!");
@@ -101,6 +100,7 @@ public class SyntacticAnalyzer {
         else return true;
     }
 
+    /** Check next construction: <variable> <operator> <variable | number> */
     private SynError assignment(){
         if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
         if (!oneLexemRequire(getNextLexem(), Token.Type.SEPARATOR)) return SynError.EXPECTED_OPERATOR;
@@ -109,31 +109,28 @@ public class SyntacticAnalyzer {
         return SynError.OK;
     }
 
-    public SynError beginConstruction(){
-        SynError checkConstructionEndresult;
-        SynError checkNextConstructionResult;
+    /** <begin> <body> <key word[end]> <semicolon> */
+    private SynError beginConstruction(){
         getNextLexem(); // remove 'begin'
         if (twoLexemRequire(lexemList.get(0), Token.Type.KEY_WORD, Token.Type.VARIABLE)) {
-            checkNextConstructionResult = checkNextConstruction();
-            if (checkNextConstructionResult != SynError.OK) return checkNextConstructionResult;
-        }
-        else return SynError.EXPECTED_VARIABLE;
+            currentError = checkNextConstruction();
+            if (currentError != SynError.OK) return currentError;
+        } else return SynError.EXPECTED_VARIABLE;
         if (!oneLexemRequire(getNextLexem(), Token.Type.SEPARATOR)) return SynError.EXPECTED_SEMICOLON;
         if (oneLexemRequire(lexemList.get(0), Token.Type.KEY_WORD)) {
-            checkConstructionEndresult = checkConstructionEnd();
-            if (checkConstructionEndresult != SynError.OK) return checkConstructionEndresult;
-        }
-        else return SynError.KEY_WORD;
+            if (isEnd(lexemList.get(0))) {
+                currentError = checkEndConstruction();
+                if (currentError != SynError.OK) return  currentError;
+            } else return SynError.KEY_WORD;
+        } else return SynError.KEY_WORD;
         return SynError.OK;
     }
 
-    public SynError forConstruction(){
-        SynError assignmentResult;
-        SynError checkNextConstructionResult;
-        SynError checkConstructionEndResult;
+    /** <key word[for]> <assignment> <key word[to]> <variable> <key word[do]> <body> <checkEndConstruction> */
+    private SynError forConstruction(){
         getNextLexem(); //remove 'for'
-        assignmentResult = assignment();
-        if (assignmentResult != SynError.OK) return assignmentResult;
+        currentError = assignment();
+        if (currentError != SynError.OK) return currentError;
         if (oneLexemRequire(lexemList.get(0), Token.Type.KEY_WORD)) {
             if (!isTO(lexemList.get(0))) return SynError.KEY_WORD;
             else getNextLexem(); // remove'to'
@@ -144,148 +141,98 @@ public class SyntacticAnalyzer {
             else getNextLexem(); // remove 'do'
         } else return SynError.KEY_WORD;
         if (twoLexemRequire(lexemList.get(0), Token.Type.KEY_WORD, Token.Type.VARIABLE)) {
-            checkNextConstructionResult = checkNextConstruction();
-            if (checkNextConstructionResult != SynError.OK) return checkNextConstructionResult;
+            currentError = checkNextConstruction();
+            if (currentError != SynError.OK) return currentError;
         } else return SynError.EXPECTED_VARIABLE;
         if (oneLexemRequire(lexemList.get(0), Token.Type.KEY_WORD)) {
-            checkConstructionEndResult = checkConstructionEnd();
-            if (checkConstructionEndResult != SynError.OK) return checkConstructionEndResult;
+            if (isEnd(lexemList.get(0))) {
+                currentError = checkEndConstruction();
+                if (currentError != SynError.OK) return  currentError;
+            } else return SynError.KEY_WORD;
         } else return SynError.KEY_WORD;
         return SynError.OK;
     }
 
-    private SynError checkConstructionEnd() {
-        if (!isEnd(lexemList.get(0))) return SynError.KEY_WORD;
-        else getNextLexem();
+    /** <end> <semicolon> */
+    private SynError checkEndConstruction() {
+        getNextLexem();
         if (!oneLexemRequire(getNextLexem(), Token.Type.SEPARATOR)) return SynError.EXPECTED_SEMICOLON;
         return SynError.OK;
     }
 
+    /** <firstCondition> <logic operator> <secondCondition> */
+    private SynError whileConstructions(){
+        currentError = firstCondition();
+        if (currentError != SynError.OK) return currentError;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.LOGIC_OPERATOR)) return SynError.EXPECTED_OPERATOR;
+        currentError = secondCondition();
+        if (currentError != SynError.OK) return currentError;
+        return SynError.OK;
+    }
+
+    /** <variable> <math operator> <logic operator> <variable> */
+    private SynError firstCondition(){
+        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
+        if(!oneLexemRequire(getNextLexem(), Token.Type.MATH_OPERATOR)) return SynError.EXPECTED_OPERATOR;
+        if(!oneLexemRequire(getNextLexem(), Token.Type.LOGIC_OPERATOR)) return SynError.EXPECTED_OPERATOR;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
+        return SynError.OK;
+    }
+
+    /** <variable> <math operator> <variable> <left square paren> <variable> <right square paren> */
+    private SynError secondCondition(){
+        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.MATH_OPERATOR)) return SynError.EXPECTED_OPERATOR;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.LEFT_SQUARE_PAREN)) return SynError.EXPECTED_LEFT_PAREN;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)) return SynError.EXPECTED_VARIABLE;
+        if (!oneLexemRequire(getNextLexem(), Token.Type.RIGHT_SQEARE_PAREN)) return SynError.EXPECTED_RIGHT_PAREN;
+        return SynError.OK;
+    }
+
+   /** Check the construction body. Are there some other constructions inside*/
     private SynError checkNextConstruction() {
-        SynError assignmentResult;
-        if (lexemList.get(0).getTyp() == Token.Type.KEY_WORD) checkTheKeyWord();
-        else {
-            assignmentResult = assignment();
-            if (assignmentResult != SynError.OK) return SynError.EXPECTED_VARIABLE;
-        }
-        return SynError.OK;
-    }
-
-    // check the for loop body construction. Is it KW or VAR?
-    private SynError forBodyConstruction() {
-        SynError checkTheKeyWordResult;
-        SynError assignmentResult;
         if (lexemList.get(0).getTyp() == Token.Type.KEY_WORD) {
-            checkTheKeyWordResult = checkTheKeyWord();
-            if (checkTheKeyWordResult != SynError.OK) return checkTheKeyWordResult;
-        } else {
-            assignmentResult = assignment();
-            if (assignmentResult != SynError.OK) return assignmentResult;
+            currentError = checkTheKeyWord();
+            if (currentError != SynError.OK) return currentError;
+        }
+        else {
+            currentError = assignment();
+            if (currentError != SynError.OK) return currentError;
         }
         return SynError.OK;
     }
 
-    // check what KW is and chose the next construction for analyze
-    private void checkTheKeyWord() {
-        if (isBegin(lexemList.get(0))) currentError = beginConstruction();
-        else if (isFOR(lexemList.get(0))) currentError = forConstruction();
+    /** Chose the next construction for analyze by the key word */
+    private SynError checkTheKeyWord() {
+        if (isBegin(lexemList.get(0))) {
+            currentError = beginConstruction();
+            if (currentError != SynError.OK) return currentError;
+        }
+        else if (isFOR(lexemList.get(0))) {
+            currentError = forConstruction();
+            if (currentError != SynError.OK) return currentError;
+        }
         return SynError.OK;
     }
 
-
-    /**
-     * First part, which contains key word.
-     * @param tokens is a list of lexems in right order.
-     * @return exception type
-     */
-    public SynError code(ArrayList<Token> tokens){
+    /** Check the first construction */
+    SynError code(ArrayList<Token> tokens){
         lexemList = tokens;
         try {
             if (oneLexemRequire(lexemList.get(0), Token.Type.KEY_WORD)) { // is KW?
-                checkTheKeyWord();
-            } else currentError = SynError.KEY_WORD;
+                 currentError = checkTheKeyWord();
+                if (currentError != SynError.OK) return currentError;
+            } else return SynError.KEY_WORD;
         } catch (java.lang.IndexOutOfBoundsException ex){
-            currentError = SynError.EXPECTED_SEMICOLON;
-        }
-    }
-
-    /**
-     * Second part, which looks for key word conditions.
-     * @param lexemList is a list of lexems in right order.
-     * @return exception type
-     */
-    private SynError statement(ArrayList<Token> lexemList){
-        SynError firstRuleResult;
-        SynError secondRuleResult;
-        firstRuleResult = firstRule(lexemList);
-        if (firstRuleResult != SynError.OK){
-            return firstRuleResult;
-        }
-        if (!oneLexemRequire(getNextLexem(), Token.Type.LOGIC_OPERATOR)){
-            return SynError.EXPECTED_OPERATOR;
-        }
-        secondRuleResult = secondRule(lexemList);
-        if (secondRuleResult != SynError.OK){
-            return secondRuleResult;
+            return SynError.EXPECTED_SEMICOLON;
         }
         return SynError.OK;
     }
 
-    /**
-     * Third part, which contains first key word condition.
-     * @param lexemList is a list of lexems in right order.
-     * @return exception type
-     */
-    private SynError firstRule(ArrayList<Token> lexemList){
-        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)){
-            return SynError.EXPECTED_VARIABLE;
-        }
-        if(!oneLexemRequire(getNextLexem(), Token.Type.MATH_OPERATOR)){
-            return SynError.EXPECTED_OPERATOR;
-        }
-        if(!oneLexemRequire(getNextLexem(), Token.Type.LOGIC_OPERATOR)){
-            return SynError.EXPECTED_OPERATOR;
-        }
-        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)){
-            return SynError.EXPECTED_VARIABLE;
-        }
-        return SynError.OK;
-    }
-
-    /**
-     * Third part, which contains second key word condition.
-     * @param lexemList is a list of lexems in right order.
-     * @return exception type
-     */
-    private SynError secondRule(ArrayList<Token> lexemList){
-        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)){
-            return SynError.EXPECTED_VARIABLE;
-        }
-        if(!oneLexemRequire(getNextLexem(), Token.Type.MATH_OPERATOR)){
-            return SynError.EXPECTED_OPERATOR;
-        }
-        if (!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)){
-            return SynError.EXPECTED_VARIABLE;
-        }
-        if (!oneLexemRequire(getNextLexem(), Token.Type.LEFT_SQUARE_PAREN)){
-            return SynError.EXPECTED_LEFT_PAREN;
-        }
-        if(!oneLexemRequire(getNextLexem(), Token.Type.VARIABLE)){
-            return SynError.EXPECTED_VARIABLE;
-        }
-        if(!oneLexemRequire(getNextLexem(), Token.Type.RIGHT_SQEARE_PAREN)){
-            return SynError.EXPECTED_RIGHT_PAREN;
-        }
-        return SynError.OK;
-    }
-
-    /**
-     *
-     * @param exception is exception type.
-     * @return message for user about Exceptions.
-     */
-    public String getMessage(SynError exception){
+    /** Output exception message */
+    String getMessage(SynError exception){
         if (exception == SynError.OK) return "OK";
-        return String.format("Syntactic error!\n\n%s ...\n\n%s is expected\nPosition: %s", currentToken.getValue(), exception, position);
+        return String.format("Syntactic error! %s\n\n... %s ...\n\nPosition: %s", exception, currentToken.getValue(), position);
     }
 }

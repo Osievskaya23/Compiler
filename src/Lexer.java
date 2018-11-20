@@ -1,24 +1,27 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class LexicalAnalyzer extends Main{
+public class Lexer extends Main{
 
     /** Array, what contain token lexem from the "text.txt" file and information about it */
-    ArrayList<Token> tokens = new ArrayList<>();
+    public ArrayList<Token> tokens = new ArrayList<>();
 
     /** Array, what contains key words from the "key words.txt" file */
     private ArrayList<String> keyWords = new ArrayList<>();
+
+    /** Array, what contains key words (types of  variables from the "variable type.txt" file */
+    private ArrayList<String> variableTypes = new ArrayList<>();
 
     /** Text to by analyzed*/
     private String inputText;
 
     /** Default constructor */
-    LexicalAnalyzer(){
+    Lexer(){
     }
 
     /**
-     * Oppening the file "text.txt"
-     * Read text to be analyzed
+     * Open "text.txt"
+     * Read text to be analyzed. Split in words and write them down into the tokens list
      * @return text to be analyzed
      */
     String getInputText (){
@@ -40,8 +43,8 @@ public class LexicalAnalyzer extends Main{
     }
 
     /**
-     * Oppening the file "key words.txt"
-     * Read key words
+     * Open "key words.txt"
+     * Read key words and write them down into the keyWords list
      * @return list of key words
      */
     ArrayList<String> getKeyWords (){
@@ -58,6 +61,27 @@ public class LexicalAnalyzer extends Main{
             System.out.println("IOException!");
         }
         return keyWords;
+    }
+
+    /**
+     * Open "variable type.txt"
+     * Read types of variables and write them down into the variableTypes list
+     * @return list of key words
+     */
+    ArrayList<String> getKeyWordsType(){
+        try{
+            FileInputStream fstream = new FileInputStream("C:\\Users\\38066\\IdeaProjects\\" +
+                    "SP_lab3_Osievskaya\\src\\variable type.txt");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            String strLine;
+            while ((strLine = br.readLine()) !=  null){
+                variableTypes.add(strLine);
+            }
+            fstream.close();
+        } catch (IOException ex) {
+            System.out.println("IOException!");
+        }
+        return variableTypes;
     }
 
     /**
